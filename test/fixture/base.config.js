@@ -10,7 +10,7 @@ const config = {
       presets ({ isServer }) {
         return [
           [
-            require.resolve('@nuxt/babel-preset-app'),
+            require.resolve('@nuxt/babel-preset-app-edge'),
             {
               buildTarget: isServer ? 'server' : 'client',
               corejs: { version: 3 }

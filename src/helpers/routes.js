@@ -149,7 +149,7 @@ exports.makeRoutes = (baseRoutes, {
   }
 
   try {
-    const { sortRoutes } = require('@nuxt/utils')
+    const { sortRoutes } = require('@nuxt/utils-edge')
     localizedRoutes = sortRoutes(localizedRoutes)
   } catch (error) {
     // Ignore
