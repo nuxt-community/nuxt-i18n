@@ -15,6 +15,8 @@ Follow this guide to upgrade from one major version to the other.
 
 ### `$nuxtI18nSeo` has been removed. Use `$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })` instead.
 
+### `onlyOnNoPrefix` has been removed. It's features are combined into `onlyOnRoot` instead.
+
 ## Upgrading from 5.x to 6.x
 
 ### Global SEO features are now disabled by default

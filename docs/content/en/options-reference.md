@@ -163,7 +163,6 @@ Supported properties:
 - `alwaysRedirect` (default: `false`) - Set to always redirect to the value stored in the cookie, not just on first visit.
 - `fallbackLocale` (default: `null`) - If none of the locales match the browser's locale, use this one as a fallback.
 - `onlyOnRoot` (default: `false`) - Set to `true` (recommended for improved SEO) to only attempt to detect the browser locale on the root path (`/`) of the site. Only effective when using strategy other than `'no_prefix'`.
-- `onlyOnNoPrefix` (default: `false`) - This is a more permissive variant of `onlyOnRoot` that will allow attempt to detect the browser locale on the root path (`/`) and also on paths that have no locale prefix (like `/foo`). Only effective when `onlyOnRoot` is not enabled and using strategy other than `'no_prefix'`.
 - `useCookie` (default: `true`) - If enabled, a cookie is set once the user has been redirected to browser's preferred locale, to prevent subsequent redirections. Set to `false` to redirect every time.
 - `cookieKey` (default: `'i18n_redirected'`) - Cookie name.
 - `cookieDomain` (default: `null`) - Set to override the default domain of the cookie. Defaults to the **host** of the site.

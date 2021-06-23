@@ -39,7 +39,6 @@ export const DEFAULT_OPTIONS = {
     cookieKey: 'i18n_redirected',
     cookieSecure: false,
     fallbackLocale: '',
-    onlyOnNoPrefix: false,
     onlyOnRoot: false,
     useCookie: true
   },
