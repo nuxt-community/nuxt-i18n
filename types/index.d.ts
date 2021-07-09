@@ -12,6 +12,7 @@ export type Directions = 'ltr' | 'rtl' | 'auto'
 export interface LocaleObject extends Record<string, any> {
   code: Locale
   dir?: Directions
+  domain?: string
   file?: string
   isCatchallLocale?: boolean
   iso?: string
