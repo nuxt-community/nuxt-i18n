@@ -21,7 +21,6 @@ export interface DetectBrowserLanguageOptions {
   cookieKey?: string
   cookieSecure?: boolean
   fallbackLocale?: Locale | null
-  onlyOnNoPrefix?: boolean
   onlyOnRoot?: boolean
   useCookie?: boolean
 }

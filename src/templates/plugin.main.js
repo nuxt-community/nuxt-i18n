@@ -55,7 +55,6 @@ export default async (context) => {
   const {
     alwaysRedirect,
     fallbackLocale,
-    onlyOnNoPrefix,
     onlyOnRoot,
     useCookie,
     cookieKey,
@@ -181,9 +180,9 @@ export default async (context) => {
     }
 
     if (getLocaleFromRoute(route) === locale) {
-      // If "onlyOnRoot" or "onlyOnNoPrefix" is set and strategy is "prefix_and_default", prefer unprefixed route for
+      // If "onlyOnRoot" is set and strategy is "prefix_and_default", prefer unprefixed route for
       // default locale.
-      if (!(onlyOnRoot || onlyOnNoPrefix) || locale !== options.defaultLocale || options.strategy !== Constants.STRATEGIES.PREFIX_AND_DEFAULT) {
+      if (!onlyOnRoot || locale !== options.defaultLocale || options.strategy !== Constants.STRATEGIES.PREFIX_AND_DEFAULT) {
         return ''
       }
     }
@@ -288,11 +287,7 @@ export default async (context) => {
 
     if (options.strategy !== Constants.STRATEGIES.NO_PREFIX) {
       if (onlyOnRoot) {
-        if (route.path !== '/') {
-          return ''
-        }
-      } else if (onlyOnNoPrefix) {
-        if (!alwaysRedirect && route.path.match(getLocalesRegex(options.localeCodes))) {
+        if (route.path !== '/' || (!alwaysRedirect && route.path.match(getLocalesRegex(options.localeCodes)))) {
           return ''
         }
       }

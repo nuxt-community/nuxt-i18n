@@ -1788,7 +1788,7 @@ describe('prefix + detectBrowserLanguage', () => {
   })
 })
 
-describe('prefix + detectBrowserLanguage + onlyOnNoPrefix', () => {
+describe('prefix + detectBrowserLanguage + onlyOnRoot', () => {
   /** @type {Nuxt} */
   let nuxt
 
@@ -1799,7 +1799,7 @@ describe('prefix + detectBrowserLanguage + onlyOnNoPrefix', () => {
         strategy: 'prefix',
         detectBrowserLanguage: {
           useCookie: true,
-          onlyOnNoPrefix: true
+          onlyOnRoot: true
         }
       }
     }
