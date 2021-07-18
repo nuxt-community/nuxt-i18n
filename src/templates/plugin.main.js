@@ -395,9 +395,11 @@ export default async (context) => {
     } else if (options.strategy !== Constants.STRATEGIES.NO_PREFIX) {
       const routeLocale = getLocaleFromRoute(route)
       finalLocale = routeLocale
-    } else if (useCookie) {
-      finalLocale = app.i18n.getLocaleCookie()
     }
+  }
+
+  if (!finalLocale && useCookie) {
+    finalLocale = app.i18n.getLocaleCookie()
   }
 
   if (!finalLocale) {
